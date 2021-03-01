@@ -12,6 +12,7 @@ namespace OOP2_Mid_Term_Assignment
         private string accountName;
         private double balance;
         private Address address;
+        static int next = 3300; 
         public string AccountName
         {
             get {return this.accountName;}
@@ -22,6 +23,17 @@ namespace OOP2_Mid_Term_Assignment
         {
             get {return this.balance;}
             set {this.balance = value;}
+        }
+
+        public void GenarateAccountNumber ()
+        {
+            this.accountNumber = next;
+            next++;
+        }
+
+        public int AccountNumber
+        {
+            get { return this.accountNumber;}
         }
 
         public void Withdraw (double amount)
@@ -41,6 +53,11 @@ namespace OOP2_Mid_Term_Assignment
 
         public void ShowAccountInformation()
         {
+            Console.WriteLine("Account Information :");
+            Console.WriteLine("Account Name : " + this.accountName);
+            Console.WriteLine("Account Name : " + this.accountNumber);
+            Console.WriteLine("Account Name : " + this.balance);
+            Console.WriteLine("Account Name : " + this.address.GetAddress());
 
         }
     }

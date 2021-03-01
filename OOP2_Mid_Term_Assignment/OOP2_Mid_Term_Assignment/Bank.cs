@@ -31,71 +31,83 @@ namespace OOP2_Mid_Term_Assignment
 
         public void DeleteAccount (int accountNumber)
         {
-           /* for (int i = 0; i < myBank.Length; i++)
-            {
-                if (myBank[i]. == null) // Account number check is unfinished here
-                {
-                    myBank[i] = account;
-                    break;
-                }
-            }
-
             for (int i = 0; i < myBank.Length; i++)
             {
-                if (myBank[i] == null) // If accountnumber and myBank[i].acn is equal or not
+                if (myBank[i].AccountNumber == accountNumber)
                 {
                     myBank[i] = null;
                     break;
                 }
-            }*/
-
+            }
 
         }
-        public void Transaction (int amount, Account receiver)
+        public void Transaction (int choice, Account receiver)
         {
-            switch(amount)
+            switch(choice)
             {
                 case 1:
-                    /* for (int i = 0; i < myBank.Length; i++)
-            {
-                if (myBank[i]. == null) // Account number check is unfinished here
-                {
-                    myBank[i] = account;
-                    break;
-                }
-            }*/
-
+                    // Writing
+                    int accountNumber;
+                    int amount;
+                    for (int i = 0; i < myBank.Length; i++)
+                        {
+                            if (myBank[i].AccountNumber == accountNumber) 
+                                {
+                                    myBank[i].Deposit(amount);
+                                    break;
+                                }
+                         }
                     break;
                 case 2:
-                    /* for (int i = 0; i < myBank.Length; i++)
-            {
-                if (myBank[i]. == null) // Account number check is unfinished here
-                {
-                    myBank[i] = account;
-                    break;
-                }
-            }*/
+                    // Writing
+                    int accountNumber;
+                    int amount;
+                    for (int i = 0; i < myBank.Length; i++)
+                    {
+                        if (myBank[i].AccountNumber == accountNumber) 
+                        {
+                            myBank[i].Withdraw(amount);
+                            break;
+                        }
+                    }
                     break;
                 case 3:
-                    /* for (int i = 0; i < myBank.Length; i++)
-            {
-                if (myBank[i]. == null) // Account number check is unfinished here
-                {
-                    myBank[i] = account;
-                    break;
-                }
-            }*/
+                    //Writing
+                    int accountNumber;
+                    int amount;
+                    int transfer;
+                    for (int i = 0; i < myBank.Length; i++)
+                    {
+                        if (myBank[i] == receiver) 
+                        {
+                            transfer = i;
+                            break;
+                        }
+
+                    }
+
+                    for (int i = 0; i < myBank.Length; i++)
+                    {
+                        if (myBank[i].AccountNumber == accountNumber) 
+                        {
+                            myBank[i].Transfer(amount, myBank[transfer]);
+                            break;
+                        }
+                    }
                     break;
             }
         }
 
         public void PrintAccountDetails ( )
         {
-              /* for (int i = 0; i < myBank.Length; i++)
+              for (int i = 0; i < myBank.Length; i++)
             {
-                 // Show all the accounts available and add ShowAccount info
-                }
-            } */
+                Console.WriteLine((i + 1) + ". " + myBank[i].AccountName);      
+            }
+            //Writing
+            int choice;
+            myBank[choice - 1].ShowAccountInformation();
+        }
 
         }
         
