@@ -23,7 +23,7 @@ namespace OOP2_Mid_Term_Assignment
 
         public string GetAddress ()
         {
-            string address = "";
+            string address = "Address : Road No - " + roadNo + " House No - " + houseNo + " City - " + city + " Country - " + country + "\n";
             return address;
         }
     }

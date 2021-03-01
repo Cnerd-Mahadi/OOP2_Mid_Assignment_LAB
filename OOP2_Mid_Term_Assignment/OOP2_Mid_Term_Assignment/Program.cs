@@ -10,7 +10,7 @@ namespace OOP2_Mid_Term_Assignment
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }
