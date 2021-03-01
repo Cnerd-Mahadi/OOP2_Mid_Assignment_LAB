@@ -38,17 +38,27 @@ namespace OOP2_Mid_Term_Assignment
 
         public void Withdraw (double amount)
         {
-
+            if (amount > 0 && amount <= balance)
+            {
+                balance = balance - amount;
+            }
         }
 
         public void Deposit (double amount)
         {
-
+            if (amount > 0)
+            {
+                balance = balance + amount;
+            }
         }
 
         public void Transfer(double amount, Account receiver)
         {
-            
+            if (amount > 0 && amount <= balance)
+            {
+                balance = balance - amount;
+                receiver.Deposit(amount);
+            }
         }
 
         public void ShowAccountInformation()

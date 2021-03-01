@@ -42,7 +42,7 @@ namespace OOP2_Mid_Term_Assignment
             }
 
         }
-        public void Transaction (int choice, int amount, int accountNumber, Account receiver)
+        public void Transaction (int choice, double amount, int accountNumber, Account receiver)
         {
             switch(choice)
             {
