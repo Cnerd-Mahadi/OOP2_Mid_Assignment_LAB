@@ -1,0 +1,7 @@
+D:\O2-TASK\OOP2_Mid_Term_Assignment\OOP2_Mid_Term_Assignment\bin\Debug\OOP2_Mid_Term_Assignment.exe.config
+D:\O2-TASK\OOP2_Mid_Term_Assignment\OOP2_Mid_Term_Assignment\bin\Debug\OOP2_Mid_Term_Assignment.exe
+D:\O2-TASK\OOP2_Mid_Term_Assignment\OOP2_Mid_Term_Assignment\bin\Debug\OOP2_Mid_Term_Assignment.pdb
+D:\O2-TASK\OOP2_Mid_Term_Assignment\OOP2_Mid_Term_Assignment\obj\Debug\OOP2_Mid_Term_Assignment.csprojAssemblyReference.cache
+D:\O2-TASK\OOP2_Mid_Term_Assignment\OOP2_Mid_Term_Assignment\obj\Debug\OOP2_Mid_Term_Assignment.csproj.CoreCompileInputs.cache
+D:\O2-TASK\OOP2_Mid_Term_Assignment\OOP2_Mid_Term_Assignment\obj\Debug\OOP2_Mid_Term_Assignment.exe
+D:\O2-TASK\OOP2_Mid_Term_Assignment\OOP2_Mid_Term_Assignment\obj\Debug\OOP2_Mid_Term_Assignment.pdb
