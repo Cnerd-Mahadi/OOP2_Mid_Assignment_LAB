@@ -12,7 +12,18 @@ namespace OOP2_Mid_Term_Assignment
         private string accountName;
         private double balance;
         private Address address;
-        static int next = 3300; 
+        static int next = 3300;
+
+        public Account(Address address)
+        {
+            this.address = address;
+        }
+
+        public Address Address
+        {
+            get {return this.address;}
+            set {this.address = value;}
+        }
         public string AccountName
         {
             get {return this.accountName;}
@@ -24,6 +35,8 @@ namespace OOP2_Mid_Term_Assignment
             get {return this.balance;}
             set {this.balance = value;}
         }
+
+    
 
         public void GenarateAccountNumber ()
         {

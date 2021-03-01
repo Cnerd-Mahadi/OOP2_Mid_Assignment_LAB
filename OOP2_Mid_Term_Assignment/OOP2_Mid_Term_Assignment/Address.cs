@@ -13,12 +13,28 @@ namespace OOP2_Mid_Term_Assignment
         private string city;
         private string country;
 
-        public Address(string roadNo, string houseNo, string city, string country)
+        public string RoadNo 
+            {
+                get { return this.roadNo; }
+                set { this.roadNo = value; }
+            }
+
+        public string HouseNo
         {
-            this.roadNo = roadNo;
-            this.houseNo = houseNo;
-            this.city = city;
-            this.country = country;
+            get { return this.houseNo; }
+            set { this.houseNo = value; }
+        }
+
+        public string City
+        {
+            get { return this.city; }
+            set { this.city = value; }
+        }
+
+        public string Country
+        {
+            get { return this.country; }
+            set { this.country = value; }
         }
 
         public string GetAddress ()
