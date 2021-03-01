@@ -24,6 +24,7 @@ namespace OOP2_Mid_Term_Assignment
                 if (myBank[i] == null)
                 {
                     myBank[i] = account;
+                    myBank[i].GenarateAccountNumber();
                     break;
                 }
             }
@@ -41,14 +42,12 @@ namespace OOP2_Mid_Term_Assignment
             }
 
         }
-        public void Transaction (int choice, Account receiver)
+        public void Transaction (int choice, int amount, int accountNumber, Account receiver)
         {
             switch(choice)
             {
                 case 1:
-                    // Writing
-                    int accountNumber;
-                    int amount;
+                    
                     for (int i = 0; i < myBank.Length; i++)
                         {
                             if (myBank[i].AccountNumber == accountNumber) 
@@ -59,9 +58,6 @@ namespace OOP2_Mid_Term_Assignment
                          }
                     break;
                 case 2:
-                    // Writing
-                    int accountNumber;
-                    int amount;
                     for (int i = 0; i < myBank.Length; i++)
                     {
                         if (myBank[i].AccountNumber == accountNumber) 
@@ -72,10 +68,8 @@ namespace OOP2_Mid_Term_Assignment
                     }
                     break;
                 case 3:
-                    //Writing
-                    int accountNumber;
-                    int amount;
-                    int transfer;
+
+                    int transfer = 0;
                     for (int i = 0; i < myBank.Length; i++)
                     {
                         if (myBank[i] == receiver) 
@@ -95,21 +89,24 @@ namespace OOP2_Mid_Term_Assignment
                         }
                     }
                     break;
+                
+                default:
+                    break;
             }
         }
 
         public void PrintAccountDetails ( )
         {
-              for (int i = 0; i < myBank.Length; i++)
+          for (int i = 0; i < myBank.Length; i++)
             {
                 Console.WriteLine((i + 1) + ". " + myBank[i].AccountName);      
             }
-            //Writing
-            int choice;
+            Console.WriteLine("Insert Account Serial No. If You Further Want To See The Full Information Of An Account.");
+            int choice = Convert.ToInt32(Console.ReadLine());
             myBank[choice - 1].ShowAccountInformation();
         }
 
         }
         
     }
-}
+
