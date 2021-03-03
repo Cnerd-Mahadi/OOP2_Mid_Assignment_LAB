@@ -11,21 +11,22 @@ namespace OOP2_Mid_Term_Assignment
         static void Main(string[] args)
         {
             Bank b1 = new Bank();
-            b1.BankName = "Stay_Humble";
-            Console.WriteLine("Welcome To {0} Bank...",b1.BankName);
+            b1.BankName = "STAY HUMBLE";
+            Console.WriteLine("________________________WELCOME TO {0} BANK________________________________\n",b1.BankName);
             bool value = true;            
             while(value)
             {
-                Console.WriteLine("What Service Do You Want?");
-                Console.WriteLine("1.Add Account\n2.Delete Account\n3.Transaction\n4.Print Account Details\n5.Quit");
+                Console.WriteLine("Please Enter The Service You Want_\n");
+                Console.WriteLine("\t1.Add Account\n\t2.Delete Account\n\t3.Transaction\n\t4.Show All Accounts\n\t5.Quit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
                 case 1:
                     Account a1 = new Account(new Address());
-                    Console.WriteLine("Enter Your Account Name :");
+                    Console.WriteLine("Enter Your Account Information To Create Account...");
+                    Console.WriteLine("Account Name :");
                     a1.AccountName = Console.ReadLine();
-                    Console.WriteLine("Enter Balance :");
+                    Console.WriteLine("Balance :");
                     a1.Balance = Convert.ToInt32(Console.ReadLine());
                     b1.AddAccount(a1);
                     break;
@@ -37,13 +38,19 @@ namespace OOP2_Mid_Term_Assignment
                     break;
 
                 case 3:
-                    Console.WriteLine("Enter The Transaction Service:\n1.Deposit\n2.Withdraw\n3.Transfer");
+                    Console.WriteLine("Enter The Transaction Service:\n\t1.Deposit\n\t2.Withdraw\n\t3.Transfer");
                     int c2 = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Enter The Amount:");
-                    int amount = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Enter The Account Number:");
-                    int senderAccountNumber = Convert.ToInt32(Console.ReadLine());
-                    b1.Transaction(c2, senderAccountNumber, amount);
+                        if (c2 == 1 || c2 == 2 || c2 == 3)
+                        { Console.WriteLine("Enter The Amount:");
+                            double amount = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("Enter The Account Number:");
+                            int senderAccountNumber = Convert.ToInt32(Console.ReadLine());
+                            b1.Transaction(c2, senderAccountNumber, amount);
+                        }
+                        else 
+                        {
+                            Console.WriteLine("Please Input A Valid Choice...");
+                        }
                     break;
                 case 4:
                     Console.WriteLine("These Are All Your Accounts..");
@@ -51,8 +58,10 @@ namespace OOP2_Mid_Term_Assignment
                     break;
                 case 5:
                         value = false;
+                        Console.WriteLine("\n___________Thank You For Chosing Our Service!______________");
                         break;
                   default:
+                        Console.WriteLine("Please Input A Valid Choice...");
                         break;
                 }
             }

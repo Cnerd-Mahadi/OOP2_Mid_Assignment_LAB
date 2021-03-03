@@ -36,9 +36,7 @@ namespace OOP2_Mid_Term_Assignment
             set {this.balance = value;}
         }
 
-    
-
-        public void GenarateAccountNumber ()
+        public void AutoAcoountNumberGenarator ()
         {
             this.accountNumber = next;
             next++;
@@ -53,7 +51,7 @@ namespace OOP2_Mid_Term_Assignment
         {
             if (amount > 0 && amount <= balance)
             {
-                balance = balance - amount;
+                balance -= amount;
             }
         }
 
@@ -61,7 +59,7 @@ namespace OOP2_Mid_Term_Assignment
         {
             if (amount > 0)
             {
-                balance = balance + amount;
+                balance +=  amount;
             }
         }
 
@@ -69,19 +67,14 @@ namespace OOP2_Mid_Term_Assignment
         {
             if (amount > 0 && amount <= balance)
             {
-                balance = balance - amount;
+                balance -= amount;
                 receiver.Deposit(amount);
             }
         }
 
         public void ShowAccountInformation()
         {
-            Console.WriteLine("Account Information :");
-            Console.WriteLine("Account Name : " + this.accountName);
-            Console.WriteLine("Account Name : " + this.accountNumber);
-            Console.WriteLine("Account Name : " + this.balance);
-            Console.WriteLine("Account Name : " + this.address.GetAddress());
-
+            Console.WriteLine("__Account Information__\nAccount Name - {0}\nAccount Number - {1}\nBalance - {2}\n{3}", accountName, accountNumber, balance, address.GetAddress());
         }
     }
 }
